@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/service1/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service1",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/service1/{everything}",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/service2/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service2",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/service2/{everything}",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"]
+    }
+  ]
+}
